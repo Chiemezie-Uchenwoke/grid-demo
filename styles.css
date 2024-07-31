@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.one,
+.one1{
+    background-color: blue;
+}
+
+.two,
+.two1{
+    background-color: red;
+}
+
+.three,
+.three1{
+    background-color: gold;
+}
+
+.four,
+.four1{
+    background-color: purple;
+}
+
+.five,
+.five1{
+    background-color: rgb(179, 15, 47);
+}
+
+.six,
+.six1{
+    background-color: cornflowerblue;
+}
+
+.seven,
+.seven1{
+    background-color: coral;
+}
+
+.eight,
+.eight1{
+    background-color: aqua;
+}
+
+.nine,
+.nine1{
+    background-color: black;
+    color: white;
+}
+
+.grid-container{
+    display: grid;
+    gap: 1rem;
+
+    /*Length units: px, %, rem, vw, vh, auto
+    In column, the auto fills up space of the container while in row it fits to the height of the content of the grid item.*/
+
+    /* grid-template-columns: 400px 20% 20rem;
+    grid-template-rows: 100px 200px 150px; */
+    /* grid-template: 100px 200px auto / 400px 20% auto; */
+
+    /*Fraction (fr)
+    grid-template-columns: 1fr 2fr 3fr;*/
+
+    /* repeat() */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(5, 1fr); */
+    /* grid-template-rows: repeat(2, 200px);
+    grid-template-columns: 100px repeat(2, 150px) 1fr 2fr; */
+
+  /* minmax */
+  /* grid-template-columns: 1fr 2fr minmax(250px 2fr); */
+}
+
+/* Grid Item Positioning */
+/* Grid Column and Grid Row */
+.grid-container1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px;
+}
+
+.one1{
+    /* positioning items in grid */
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.nine1{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.six1{
+    /* This is defined based on the grid lines: The span value can also do this. */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+
+    /* short-hand for grid column start and grid column end */
+    grid-column: 1 / 3;
+
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+
+    /* short-hand for grid row start and grid row end */
+    grid-row: 2 / 4;
+
+    /* The short hand for representation of grid column and grid row: It starts with rows before column */
+    /* grid-area: 2 / 1 / 4 / 3; */
+} 
+
+.webpage{
+    display: grid;
+    grid-template-columns: 40% 1fr 1fr;
+    grid-template-rows: 100px 300px 200px 250px 200px 100px;
+    color: white;
+    gap: 5px;
+    margin: 5rem auto;
+    width: 85vw;
+}
+
+.head{
+    background-color: skyblue;
+    grid-column: 1 / 4;
+}
+
+.hero{
+    background-color: plum;
+}
+
+.main{
+    background-color: yellow;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+}
+
+.side{
+    background-color: greenyellow;
+    grid-row: 3 / 5;
+}
+
+.extra{
+    background-color: gray;
+    grid-column: 2 / 4;
+}
+
+.images{
+    background-color: green;
+    grid-column: 1 / 3;
+}
+
+.posts{
+    background-color: pink;
+}
+
+.foot{
+    background-color: orange;
+    grid-column: 1 / 4;
+}
